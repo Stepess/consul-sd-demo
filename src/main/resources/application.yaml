@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: consul-sd-demo-app
+  cloud:
+    consul:
+      enabled: true
+      host: localhost
+      port: 8500
+      discovery:
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 15s
+
+health:
+  random: true
+  threshold: 5
